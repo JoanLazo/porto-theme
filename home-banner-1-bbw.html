@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<div id="banner-slider-demo-1" class="owl-carousel owl-banner-carousel owl-bottom-narrow owl-bottom-absolute-narrow owl-theme owl-loaded owl-drag">
+						
+								<div class="item" style="background:url(https://user-images.githubusercontent.com/44485081/63642321-2da03400-c683-11e9-93d3-be5e209cf302.png) center center no-repeat;background-size:cover;">
+									<div class="container" style="position: relative;">
+										<img class="owl-lazy" data-src="https://www.portotheme.com/magento2/porto/pub/media/wysiwyg/smartwave/porto/homepage/01/slider/02.png" alt="" src="https://www.portotheme.com/magento2/porto/pub/media/wysiwyg/smartwave/porto/homepage/01/slider/02.png" style="opacity: 1;">
+										<div class="content content-slide-1 shop-banner-content-1">
+										 <span class="border-top">
+											<img style="display: none" src="{{media url=&quot;wysiwyg/smartwave/porto/homepage/01/slider/border-top.png&quot;}}"> </span>
+								<div style="position: relative; z-index: 4;">
+									<span >TREND ALERT:</span>
+										<h2>BOHO GLOW</h2>
+										<a class="btn btn-banner"  href="{{config path=&quot;web/unsecure/base_url&quot;}}">SHOP</a>
+								</div>
+										<span class="border-bottom"> <img style="display: none" src="{{media url=&quot;wysiwyg/smartwave/porto/homepage/01/slider/border-bottom.png&quot;}}"> </span>
+									</div>
+								</div>
+							</div>
+				</div>
+				<div class="owl-controls">
+						<div class="owl-nav disabled">
+							<div class="owl-prev"><em class="porto-icon-chevron-left">
+							</em>
+						</div>
+						<div class="owl-next">
+							<em class="porto-icon-chevron-right">
+
+							</em>
+						</div>
+					</div>
+					<div class="owl-dots">
+						<div class="owl-dot active">
+							<span></span>
+						</div>
+						<div class="owl-dot">
+							<span></span>
+						</div>
+					</div>
+						
+					</div>
+				</div>
+				<script type="text/javascript">
+					require(['jquery','owl.carousel/owl.carousel.min'],function($)
+					{var banner_owl=$("#banner-slider-demo-1");banner_owl.owlCarousel
+					({items:1,autoplay:true,autoplayTimeout:5000,autoplayHoverPause:true,dots:true,nav:false,navRewind:true,animateIn:'fadeIn',
+					animateOut:'fadeOut',loop:true,lazyLoad:true,
+					navText:["<em class='porto-icon-chevron-left'></em>","<em class='porto-icon-chevron-right'></em>"]});});
+				</script>
+
+<div class="single-images" style="padding-top: 14px;">
+		<div class="container">
+			<div class="row" style="margin-left: -10px; margin-right: -10px;">
+				<div class="col-md-12 col-12" style="padding-left: 10px; padding-right: 10px; padding-top: 20px;">
+					<img class="image-link" src="{{media url=&quot;porto/web/images/Home_banner2.png&quot;}}" width="1215" height="547">
+					<div class="content shop-banner-content-2">
+							<h2 class="title-banner-2">Wallflowers</h2>
+							<p class="text-banner-2" >PLUG IN FRAGRANCE</p>
+							<p class="text-banner-2">THAT´S ALWAY ON.</p>
+							<a class="btn btn-banner href="#">SHOP</a>
+						</div>  
+				</div>	
+			</div>
+		</div>
+</div>
+
+		<div style="padding-top: 40px; padding-bottom: 66px; margin-top: 34px; background-color: #f7f7f7;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="filterproduct-title"><span class="content"><strong>PRODUCTOS NUEVOS</strong></span></h2>
+		<div id="featured_product" class="owl-bottom-narrow">
+			{{block class="Smartwave\Filterproducts\Block\Home\FeaturedList" name="featured_product" product_count="5" aspect_ratio="1" image_width="212" image_height="263" template="owl_list.phtml"}}
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+
+<script type="text/javascript">
+jQuery(function($){
+$("#featured_product .owl-carousel").owlCarousel({
+autoplay: true,
+autoplayTimeout: 5000,
+autoplayHoverPause: true,
+loop: true,
+navRewind: true,
+margin: 10,
+nav: true,
+navText: ["<em class='porto-icon-left-open-huge'></em>","<em class='porto-icon-right-open-huge'></em>"],
+dots: false,
+responsive: {
+	0: {
+		items:2
+	},
+	768: {
+		items:3
+	},
+	992: {
+		items:4
+	},
+	1200: {
+		items:5
+	}
+}
+});
+});
+</script>
+
+		<div class="single-images" style="padding-top: 14px;">
+				<div class="container">
+					<div class="row" style="margin-left: -10px; margin-right: -10px;">
+						<div class="col-md-12 col-12" style="padding-left: 10px; padding-right: 10px; padding-top: 20px;">
+							<a class="image-link" href="#"> <img src="{{media url=&quot;porto/web/images/Home_banner2.png&quot;}}" width="1215" height="547"> </a>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div style="padding-top: 39px; padding-bottom: 40px; margin-bottom: 25px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+					<h2 class="filterproduct-title"><span class="content"><strong>SHOP BY CATEGORY BLOCK</strong></span></h2>
+						<div id="new_product" class="owl-bottom-narrow">
+							{{block class="Smartwave\Filterproducts\Block\Home\LatestList" name="latest_product" product_count="5" hide-addtolinks="1" aspect_ratio="1" image_width="350" image_height="263" template="owl_list.phtml"}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="custom-support" style="padding-top: 50px; padding-bottom: 50px; background-color: #f7f7f7;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="content">
+							<h2>Bath &amp; Body Works</h2>
+							<p style="text-align: center;">Bath and Body Works is your goto place for gifts &amp; goodies that surprise &amp; delight. From fresh fragrances to soothing skin care, we make finding your perfect something special a happy memory making experience. Searching for new seasonal creations or your favorite discontinued scents? We’ve got you covered there, too. Oh! And while you’re browsing, shop our latest &amp; greatest selection of lotions, soaps and candles!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+</body>
+</html>
