@@ -1,0 +1,96 @@
+php bin/magento setup:upgrade && php bin/magento setup:static-content:deploy -f en_US es_PE && bin/magento c:f
+php bin/magento s:up && php bin/magento s:s:d -f && php bin/magento c:c && php bin/magento c:f
+php bin/magento indexer:reindex
+php bin/magento indexer:reset
+ bin/magento i18n:collect-phrases -o /magento/fitlab/traducir.csv -m
+
+/////////////////////////////
+gyghome.klikealo.com
+jlazo:
+1234567890a
+/////////////////////////////
+padding: 0 0px;
+	margin-left: 0px;
+	margin: auto;
+
+    div#popup5 {
+    left: 0px;
+    margin-left: 77%;
+}
+
+877 x 290px
+
+colores fitlab:git st
+color rojo: #c21d2a; #c9192d
+color negro: #1a1615
+ffffff
+ff0000
+000000
+0: oscuro 1: #343232 #434343;
+1: #404040 oscuro1
+2:#595959 oscuro 2
+3: #E20303 ropo
+4:#FD1C1C rojo medio
+5:#FE4D4D rojo claro
+6: #dd3a3f rojo default
+7: rojo rosa: #de0734
+8: azul :#176396
+9]: color breadcrumbs : #f1f2f4
+fitlab, deporte, fitness, ventas online, ecommerce, energía, salud, belleza,Panamá,belleza, ejercicio
+Fitlab tiene ganadores de masa.
+30 de set
+
+.ma-newsletter{
+background-size: 100% 541px;
+}
+
+gris: #898989
+
+.toolbar-products .limiter .control {
+    display: inline-block;
+}
+.page-products .toolbar .limiter {
+    display: none;
+}
+
+<h3><span><?php echo $title;?> </span></h3>
+<p class="des"><?php echo $des;?> </p>
+
+
+transform: skewX(-21deg);
+
+tamaño de imagen tienda: 
+
+width: 126px;
+height: 130px;
+
+ <legend class="legend"><span><?= $block->escapeHtml(__('')) ?></span></legend><br />
+                    <div class="field note no-label"><?= $block->escapeHtml(__('')) ?></div>
+
+/////// icono de header
+action{
+		width: 30px;
+		height: 25px;
+		line-height:25px;
+		text-align: center;
+		position: relative;
+		background: url(../images/icono-carro-1.png)  no-repeat;
+		&:hover{
+			&:before{
+				color: @general_link_hover_color;
+			}
+		}
+		&:before{
+			display: none !important;
+			content: "\e04d";
+			font-family: 'simple-line-icons';
+		}
+		.text{
+			display: none;
+		}
+	}
+
+
+////imagen de registro sanitario//////
+
+<img src="https://user-images.githubusercontent.com/44485081/63385765-3f25cb00-c367-11e9-96b5-86e1b526c8ee.jpg" />
