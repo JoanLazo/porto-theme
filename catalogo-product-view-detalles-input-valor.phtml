@@ -1,0 +1,41 @@
+<div class="promotion">
+    <div class="promotion-callout">
+        <span class="callout-message">Mix &amp; Match: 5/$23</span>
+        <div class="div-promotion">
+            <a id="details" href="#" class="subrayado-simple tooltip">Details</a>
+            <div role="tooltip" class="ui-tooltip ui-widget ui-corner-all ui-widget-content" id="ui-id-42">
+                <div class="ui-tooltip-content">
+                    <span class="amaze-offscreen" tabindex="-1">tooltip</span>
+                        <span class="amaze-offscreen" tabindex="-1">tooltip</span>
+                        <span class="amaze-offscreen" tabindex="-1">tooltip</span>
+                         Must add 5 qualifying hand soaps to bag to qualify. Limited time only. While supplies last. Offer may not combine with other site offers. Subject to change without notice.
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    .div-promotion:hover .ui-tooltip {
+        display: block !important;
+    }
+</style>
+<script type="text/javascript">
+            require(['jquery'],function($){
+                $(document).ready(function() {
+                    $( ".qty-inc" ).on( "click", function() {
+                         let val=$("#qty").val();
+                         if(val>1){
+                            val--;
+                         }
+                         $("#qty").val(val);
+                    });
+                    $( ".qty-dec" ).on( "click", function() {
+                         let val=$("#qty").val();
+                         val++;
+                         $("#qty").val(val);
+                    });
+                   
+                });
+            });    
+</script>
+
