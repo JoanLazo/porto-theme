@@ -1,0 +1,46 @@
+<div class="block">
+    <div> 
+        <div class="d-flex flex-column">
+            <div style="display: flex;flex-wrap: wrap; ">
+                <div class="col-lg-6" style="padding: 0px">
+                    <div class="block-title titulo-footer">
+                        <span>{{trans "MY ACCOUNT"}}</span>
+                    </div>
+                    <div class="block-content cont-footer">
+                        <ul class="contact-info">
+                            <li><a href="{{store url="customer/account/login/referer/"}}">{{trans "Sing up/Sing in"}}</a></li></li>
+                            <li><a href="{{store url="wishlist/index/index/"}}">{{trans "My love it list"}}</a></li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="padding: 0px">
+                    <div class="block-title titulo-footer">
+                        <span>{{trans "FIND US"}}</span>
+                    </div>
+                    <div class="block-content cont-footer">
+                        <ul class="contact-info">
+                            <li><a href="{{store url="store-locator"}}">{{trans "Store Locator"}}</a></li>
+                            <li><a href="{{store url="contact-us"}}">{{trans "Contact US"}}</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+            <div class="fb-feed">
+                <!-- Load Facebook SDK for JavaScript -->
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0"></script>
+                     <!-- Your like button code -->
+                    <div class="fb-like" data-href="https://www.facebook.com/bathandbodyworks" data-width=""
+                     data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true">
+                    </div>
+            </div>
+            <div class="col-12 div-img-footer">
+                    <div style="display: flex;" class="div-footer-pagos">
+                            <img src="{{media url=&quot;porto/page_bg/visa.png&quot;}}" alt="visa" class="visa"/>
+                            <img src="{{media url=&quot;porto/page_bg/mastercard.png&quot;}}" alt="mastercard"  class="master-card"/>
+                            <img src="{{media url=&quot;porto/page_bg/mercado-pago.png&quot;}}" alt="mercado pago" class="mercado-pago"/>
+                    </div>
+                </div>    
+        </div>   
+    </div>
+
