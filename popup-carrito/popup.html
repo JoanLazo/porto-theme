@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="popup_avaiable">
+                <div class="ui-dialog-titlebar ui-header">
+                    <span id="" class="ui-dialog-title" role="heading" aria-level="2">it’s in the bag!</span>
+                </div>
+                <div class="content-popup dialog-content ui-dialog-content">
+                    <div class="mini-cart-image"> 
+                            <img src='.' alt="product-image"/>
+                    </div>
+        
+                    <div class="mini-cart-name">
+                        <a>'.$product->getResource()->getAttribute('form')->getFrontend()->getValue($product).'</a>
+                    </div>
+                    <div class="mini-cart-attributes">
+                        <div class="fragrance-name"> 
+                            <span>'.$product->getResource()->getAttribute('fragrance_name')->getFrontend()->getValue($product).'</span>
+                        </div>
+                            
+                        <div class="attibute-size">
+                            <span class="label" >Size</span>
+                            <span class="value">'.$product->getResource()->getAttribute('size')->getFrontend()->getValue($product).'</span>
+                        </div>
+                    </div>
+                    <div class="mini-cart-pricing">
+                        <span class="mini-cart-price product-pricing">
+                            <span class="product-sales-price"> S/.'.round($product->getPrice(),2).'</span>
+                        </span>
+                        <div class="promotion">
+                            <div class="promotion-callout">
+                                <span class="callout-message">aqui van las promociones</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-popup ui-dialog-button-area">
+                        <div class="mini-cart-subtotal top">
+                            <span class="label">items in your bag: </span>
+                            <span class="value">'.$product->getQty().'</span>
+                        </div>
+                        <div class="mini-cart-subtotal">
+                                <span class="label">merchandise subtotal: S/.</span>
+                                <span>'.round($product->getPrice(),2).'</span>
+                            </div>
+                        <div class="action_button space_button">
+                                    <ul>
+                                        <li>
+                                            <button title="'. __('Continue Shopping') . '" class="button btn-continue" onclick="jQuery.fancybox.close();">'. __('Continue Shopping') . '</button>
+                                        </li>
+                                        <li>
+                                            <a title="Checkout" class="button btn-viewcart" href="'. $this->_url->getUrl('checkout/cart') .'"><span>'. __('View cart &amp; checkout'). '</span></a>
+                                        </li>
+                                    </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>
