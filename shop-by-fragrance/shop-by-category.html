@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shop-by-category</title>
+</head>
+<body>
+    <div class="primary-content">
+        <div class="fragancia-top-banner">
+            <div class="content-asset">
+                <picture>
+                    <source media="(min-width: 767px)" srcset="{{media url=&quot;porto/page_bg/findafragrance_d.svg&quot;}}">
+                        <img src="{{media url=&quot;porto/page_bg/findafragrance_m.svg&quot;}}" alt="Encuentra una fragancia" role="heading" aria-level="1">
+                </picture>
+                <div class="center text-live">
+                    Dos maneras fáciles de comprar tus favoritos
+                </div>
+            </div>
+        </div>
+        <div class="fragancia-list fr-category">
+            <h2 class="subtitle">Por Category</h2>
+            <p class="note">Escoja una categoría de fragancia a continuación para ver los aromas en ese grupo.</p>
+            <div>{{block class="Magento\\Framework\\View\\Element\\Template" template="Magento_Catalog::shop/shop_by_category.phtml"}}</div> 
+        </div>
+        <div class="divider">
+                <span>o</span>
+        </div>
+        <div class="fragancia-list fr-name">
+            <h2 class="subtitle">Por nombre</h2>
+            <p class="note">Seleccione una fragancia en nuestra lista de la A a la Z para ver todos los productos disponibles en su aroma.</p>
+            <div class="mobile-only button filter-show" tabindex="0" role="button">
+                    Compra por nombre
+            </div>
+            <div class="filter-overflow">
+                <div class="filter-title mobile-only">
+                    <span role="heading" aria-level="2" tabindex="0">Comprar por nombre de fragancia</span>
+                    <span class="mobile-only close-filters" tabindex="0" role="button" aria-label="close">
+                        <a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>
+                    </span>
+                </div>
+                <div class="filter-content-shop-name filter">
+                        <div class="amaze-offscreen" aria-live="assertive"></div>
+                     <div class="filtering mobile-only">
+                         <input id="buscador-fragancia" type="text" placeholder="Buscar por fragancia..." aria-label="Buscar por fragancia">
+                     </div>
+                     <div>{{block class="Magento\\Framework\\View\\Element\\Template" template="Magento_Catalog::shop/shop_by_name.phtml"}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+llamada a bloque :  <div>{{block class="Magento\\Framework\\View\\Element\\Template" template="Magento_Catalog::shop/shop_by_category.phtml"}}</div>
