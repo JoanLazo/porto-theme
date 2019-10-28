@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="filtering mobile-only">
+                <input id="buscador-fragancia" type="text" placeholder="Buscar por fragancia..." aria-label="Buscar por fragancia">
+               </div>
+               <ul id="resultado" class="name-list clearfix">
+                  
+               </ul>
+               <script>
+                    const productos = [
+                    {
+                        inicial: 'A', nombre: 'A Thousand Wishes', link: 'https://www.google.com/'},
+                    {
+                        inicial: '', nombre: 'Afternoon Apple Picking', link: 'https://www.google.com/'},
+                    {
+                        inicial: 'B', nombre: 'Almond Blossom', link: 'https://www.google.com/'},
+                    {
+                        inicial: '', nombre: 'Balsam &amp; Firewood', link: 'https://www.google.com/'},
+                    {
+                        inicial: '', nombre: 'Banana', link: 'https://www.google.com/'},
+                    {
+                        inicial: '', nombre: 'Beautiful Day', link: 'https://www.google.com/'},
+                    {
+                        inicial: 'C', nombre: 'Cactus Blossom', link: 'https://www.google.com/'},
+                    {
+                        inicial: 'D', nombre: 'Dark Kiss', link: 'https://www.google.com/'},
+                    {
+                        inicial: '', nombre: 'Desert Wildflower', link: 'https://www.google.com/'},
+                    {
+                        inicial: 'E', nombre: 'Endless Weekend', link: 'https://www.google.com/'},
+                                    ]
+                const buscador = document.querySelector('#buscador-fragancia');
+                const resultado = document.querySelector("#resultado");
+                
+                const filtrar = () => {
+                    // console.log(formulario.value);
+                    resultado.innerHTML = '';
+                
+                    const texto = buscador.value.toLowerCase();
+                    
+                    for(let producto of productos) {
+                        let nombre = producto.nombre.toLowerCase();
+
+                        if (nombre.indexOf(texto)  !== -1) {
+                           resultado.innerHTML += `
+                            
+                           <li class="level-1">
+                        <div class="title" role="heading" aria-level="3">${producto.inicial}</div>
+                    <ul role="list">
+                        <li>
+                            <a href="${producto.link}">
+                              ${producto.nombre}
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                           `
+                        }
+                    }
+                    if(resultado.innerHTML === '') {
+                        resultado.innerHTML += `
+                        <li>Valor no encontrado ...</li>
+                        `
+                    }
+                }
+                
+                buscador.addEventListener('keyup', filtrar);
+                filtrar();
+                </script>
+</body>
+</html>

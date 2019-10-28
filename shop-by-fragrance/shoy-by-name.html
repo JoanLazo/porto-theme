@@ -1,1 +1,16 @@
 <div>{{block class="Magento\\Framework\\View\\Element\\Template" template="Magento_Catalog::shop/shop_by_name.phtml"}}</div>
+
+<script type="text/javascript">
+    require([
+        'jquery'
+    ], function ($) {
+        $(document).ready(function(){
+            $("#btn-filter-show").click(function(){
+                $(".filter-overflow").addClass("active");
+            });
+            $("#btn-close-filter-show").click(function(){
+                $(".filter-overflow").removeClass("active");
+            });
+        });
+    });
+</script>     
