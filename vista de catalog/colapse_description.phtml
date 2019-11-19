@@ -1,0 +1,16 @@
+<?php if(!empty($warnings)): ?>
+		  
+<div id="pdp-accordion" class="pdp-accordion ui-accordion ui-widget ui-helper-reset" role="tablist">
+        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" id="ui-id-1" aria-controls="ui-id-2" aria-selected="false" aria-expanded="false" tabindex="0">
+            <div class="div-ico" role="link" aria-expanded="false">
+                <span class="ui-accordion-header-icon ui-icon iconClose">
+                    </span>
+                    <?= $block->escapeHtml(__('WARNINGS')) ?>
+            </div>
+        </h3>
+        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="true" style="display: none;">
+        <!-- <span>Más información va aqui</span> -->
+        <?=$warnings ?>
+            </div>
+</div>
+<?php endif; ?>

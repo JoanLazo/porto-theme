@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content-404">
+        <div class="banner-wrap">
+                <style>
+
+                        @media only screen and (min-width: 1440px) {
+                             .banner-wrap img {
+                                margin-top:  0px;
+                                
+                                }
+                            }
+                        
+                        @media only screen and (min-width: 740px) {
+                             .banner-wrap img {
+                                left: auto;
+                                margin-left: auto;
+                                margin-top: -8.5% !important;
+                                /*max-width: 1550px;*/
+                                min-width: 0;
+                                position: relative;
+                                -webkit-transform: none;
+                                transform: none;
+                                /*width: auto;*/
+                            }
+                        }
+                        @media (max-width: 767px) {
+                            .banner-wrap img {
+                            margin-left: -35%;
+                            margin-top: 0;
+                            max-width: 100%;
+                            min-width: 160%;
+                            position: relative;
+                            vertical-align: top;
+                            }
+                        }
+                        @media only screen and (min-width: 450px) {
+                             .banner-wrap img {
+                            margin-top: 8% !important;
+                            }
+                        } 
+                        </style>
+            <picture>
+                <source srcset="{{media url=&quot;porto/page_bg/404_desktop_xm1.jpg&quot;}}" media="(min-width: 768px)">
+                <img src="{{media url=&quot;porto/page_bg/404_mobile_xm1.jpg&quot;}}" alt="404 error page">
+            </picture>
+        </div>
+        <div class="error-page-wrap">
+            <div class="content-asset">
+                <h1>Ooops! 404</h1>
+                <div class="clearfix">
+
+                </div>
+                <p>
+                    No pudimos encontrar la página que buscabas. ¡Pero tenemos muchos otros grandes hallazgos esperándote!
+                </p>
+                <a class="button" title="Comprar ahora" href="{{store url='/'}}">Comprar ahora</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
