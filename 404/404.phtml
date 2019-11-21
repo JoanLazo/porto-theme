@@ -28,7 +28,7 @@
                 </h2>
                 <div>
                             <?php echo $this->getLayout()
-                    ->createBlock('Smartwave\Filterproducts\Block\Home\LatestList')
+                    ->createBlock('Smartwave\Filterproducts\Block\Home\FeaturedList')
                     ->setTemplate('owl_list.phtml')
                     ->toHtml();
                     ?>
@@ -47,82 +47,56 @@
                 </div>
         </div>
         <div class="home-bottom-slots">
-                <div style="padding-top: 20px;">
-                        <div class="">
+                <div>
+                        <div>
                             <h2 class="filterproduct-title">
-                                <strong><?= $block->escapeHtml(__('SHOP BY CATEGORY BLOCK')) ?></strong>
+                                <strong><?= $block->escapeHtml(__('SHOP BY CATEGORY')) ?></strong>
                              </h2>
                             <div class="cont-cate grid-container text-center">
                                 <div class="item-cat">
-                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat1.png" ?>" class="rounded cat-img"
+                                    <a href="<?php echo $block->getUrl('cuidado-corporal.html')?>">
+                                        <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat1.png" ?>" class="rounded cat-img"
+                                            alt="">
+                                        <p class="title-cat"><?= $block->escapeHtml(__('Cuidado Corporal')) ?></p>
+                                    </a>
+                                   
+                                </div>
+                                <div class="item-cat">
+                                    <a href="<?php echo $block->getUrl('hogar.html')?>">
+                                        <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat2.png" ?>" class="rounded cat-img"
+                                            alt="">
+                                        <p class="title-cat"><?= $block->escapeHtml(__('Hogar')) ?></p>
+                                    </a>
+                                    
+                                </div>
+                                <div class="item-cat">
+
+                                    <a href="<?php echo $block->getUrl('hogar/velas/velas-3-mechas.html')?>">
+                                     <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat3.png" ?>" class="rounded cat-img"
                                         alt="">
-                                    <p class="title-cat"><?= $block->escapeHtml(__('Cuidado Corporal')) ?></p>
-                                    <span class="text-cat">
-                                    <?= $block->escapeHtml(__('Bath and Body Works is your go-to
-                                        place for gifts & goodies.')) ?>
-                                    </span>
-                                    <a href="<?php $block->getUrl('cuidado-corporal.html')?>" class="btn-cat">
-                                    <?= $block->escapeHtml(__('SHOP NOW')) ?>
+                                        <p class="title-cat"><?= $block->escapeHtml(__('HOGAR')) ?></p>
                                     </a>
                                 </div>
                                 <div class="item-cat">
-                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat2.png" ?>" class="rounded cat-img"
+                                    <a href="<?php echo $block->getUrl('jabones.html')?>">
+                                     <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat4.png" ?>" class="rounded cat-img"
                                         alt="">
-                                    <p class="title-cat"><?= $block->escapeHtml(__('Hogar')) ?></p>
-                                    <span class="text-cat">
-                                    <?= $block->escapeHtml(__('Bath and Body Works is your go-to
-                                        place for gifts & goodies.')) ?>
-                                    </span>
-                                    <a href="<?php $block->getUrl('hogar.html')?>" class="btn-cat">
-                                    <?= $block->escapeHtml(__('SHOP NOW')) ?>
+                                        <p class="title-cat"><?= $block->escapeHtml(__('Jabones')) ?></p>
                                     </a>
                                 </div>
                                 <div class="item-cat">
-                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat3.png" ?>" class="rounded cat-img"
-                                        alt="">
-                                    <p class="title-cat"><?= $block->escapeHtml(__('HOGAR')) ?></p>
-                                    <span class="text-cat">
-                                    <?= $block->escapeHtml(__('Bath and Body Works is your go-to
-                                        place for gifts & goodies.')) ?>
-                                    </span>
-                                    <a href="<?php $block->getUrl('hogar/velas/velas-3-mechas.html')?>" class="btn-cat">
-                                    <?= $block->escapeHtml(__('SHOP NOW')) ?>
+                                   
+                                    <a href="<?php echo $block->getUrl('cuidado-corporal/ba-o-y-ducha/jabon-liquido-y-gel-de-ba-o.html')?>">
+                                        <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat5.png" ?>" class="rounded cat-img"
+                                            alt="">
+                                        <p class="title-cat"><?= $block->escapeHtml(__('Cuidado Corporal')) ?></p>
                                     </a>
                                 </div>
                                 <div class="item-cat">
-                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat4.png" ?>" class="rounded cat-img"
+                                    <a href="<?php echo $block->getUrl('regalos.html')?>">
+                                        <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat6.png" ?>" class="rounded cat-img"
                                         alt="">
-                                    <p class="title-cat"><?= $block->escapeHtml(__('Jabones')) ?></p>
-                                    <span class="text-cat">
-                                    <?= $block->escapeHtml(__('Bath and Body Works is your go-to
-                                        place for gifts & goodies.')) ?>
-                                    </span>
-                                    <a href="<?php $block->getUrl('jabones.html')?>" class="btn-cat">
-                                    <?= $block->escapeHtml(__('SHOP NOW')) ?>
-                                    </a>
-                                </div>
-                                <div class="item-cat">
-                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat5.png" ?>" class="rounded cat-img"
-                                        alt="">
-                                    <p class="title-cat"><?= $block->escapeHtml(__('Cuidado Corporal')) ?></p>
-                                    <span class="text-cat">
-                                    <?= $block->escapeHtml(__('Bath and Body Works is your go-to
-                                        place for gifts & goodies.')) ?>
-                                    </span>
-                                    <a href="<?php $block->getUrl('cuidado-corporal/ba-o-y-ducha/jabon-liquido-y-gel-de-ba-o.html')?>" class="btn-cat">
-                                    <?= $block->escapeHtml(__('SHOP NOW')) ?>
-                                    </a>
-                                </div>
-                                <div class="item-cat">
-                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat6.png" ?>" class="rounded cat-img"
-                                        alt="">
-                                    <p class="title-cat"><?= $block->escapeHtml(__('Regalos')) ?></p>
-                                    <span class="text-cat">
-                                    <?= $block->escapeHtml(__('Bath and Body Works is your go-to
-                                        place for gifts & goodies.')) ?>
-                                    </span>
-                                    <a href="<?php $block->getUrl('regalos.html')?>" class="btn-cat">
-                                    <?= $block->escapeHtml(__('SHOP NOW')) ?>
+                                        <p class="title-cat"><?= $block->escapeHtml(__('Regalos')) ?></p>
                                     </a>
                                 </div>
                             </div>
@@ -139,19 +113,19 @@
                                                         </h2>
                                                         <ul class="clearfix">
                                                             <li class="first odd">
-                                                                <a href="<?php $block->getUrl('regalos.html')?>" manual_cm_re="Null_search-_-hs1-_-Gift_cards">
+                                                                <a href="<?php echo $block->getUrl('regalos.html')?>" manual_cm_re="Null_search-_-hs1-_-Gift_cards">
                                                                     <img alt="Gift Cards" src="<?php echo "{$urlMedia}porto/page_bg/gift-cards.svg" ?>">
                                                                     <span><?= $block->escapeHtml(__('Gift Cards')) ?></span>
                                                                 </a>
                                                             </li>
                                                             <li class="even">
-                                                                <a href="<?php $block->getUrl('cuidado-corporal.html')?>" manual_cm_re="Null_search-_-hs2-_-Find_a_fragrance">
+                                                                <a href="<?php echo $block->getUrl('cuidado-corporal.html')?>" manual_cm_re="Null_search-_-hs2-_-Find_a_fragrance">
                                                                     <img alt="Find a Fragrance" src="<?php echo "{$urlMedia}porto/page_bg/find-a-fragrance.svg" ?>">
                                                                     <span><?= $block->escapeHtml(__('Find a Fragrance')) ?></span>
                                                                 </a>
                                                             </li>
                                                             <li class="odd even">
-                                                                <a href="<?php $block->getUrl('store-locator/')?>" manual_cm_re="Null_search-_-hs3-_-Find_a_store">
+                                                                <a href="<?php echo $block->getUrl('store-locator/')?>" manual_cm_re="Null_search-_-hs3-_-Find_a_store">
                                                                     <img alt="Find a Store" src="<?php echo "{$urlMedia}porto/page_bg/find-a-store.svg" ?>">
                                                                     <span><?= $block->escapeHtml(__('Find a Store')) ?></span>
                                                                 </a>
