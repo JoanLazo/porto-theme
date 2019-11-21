@@ -7,6 +7,11 @@
     <title>404</title>
 </head>
 <body>
+    <?php
+    $om = \Magento\Framework\App\ObjectManager::getInstance();
+    $storeManager = $om->get('\Magento\Store\Model\StoreManagerInterface');
+    $urlMedia = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
 <div class="null-search-content">
         <div class="wrap-search">
             <h1><?= $block->escapeHtml(__('No Results Found')) ?></h1>
@@ -19,12 +24,27 @@
         <div class="promo-block">
                 <h2 class="title">
                         <span><?= $block->escapeHtml(__('YOU MAY ALSO LIKE')) ?></span>   
+
                 </h2>
+                <div>
+                            <?php echo $this->getLayout()
+                    ->createBlock('Smartwave\Filterproducts\Block\Home\LatestList')
+                    ->setTemplate('owl_list.phtml')
+                    ->toHtml();
+                    ?>
+                </div>
         </div>
         <div class="promo-block">
                 <h2 class="title">
                         <span><?= $block->escapeHtml(__('CUSTOMER FAVES')) ?></span>   
                 </h2>
+                <div>
+                            <?php echo $this->getLayout()
+                    ->createBlock('Smartwave\Filterproducts\Block\Home\BestsellersList')
+                    ->setTemplate('owl_list.phtml')
+                    ->toHtml();
+                    ?>
+                </div>
         </div>
         <div class="home-bottom-slots">
                 <div style="padding-top: 20px;">
@@ -34,7 +54,7 @@
                              </h2>
                             <div class="cont-cate grid-container text-center">
                                 <div class="item-cat">
-                                    <img src="/media/porto/home_cat1.png" class="rounded cat-img"
+                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat1.png" ?>" class="rounded cat-img"
                                         alt="">
                                     <p class="title-cat"><?= $block->escapeHtml(__('Cuidado Corporal')) ?></p>
                                     <span class="text-cat">
@@ -46,7 +66,7 @@
                                     </a>
                                 </div>
                                 <div class="item-cat">
-                                    <img src="/media/porto/home_cat2.png" class="rounded cat-img"
+                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat2.png" ?>" class="rounded cat-img"
                                         alt="">
                                     <p class="title-cat"><?= $block->escapeHtml(__('Hogar')) ?></p>
                                     <span class="text-cat">
@@ -58,7 +78,7 @@
                                     </a>
                                 </div>
                                 <div class="item-cat">
-                                    <img src="/media/porto/home_cat3.png" class="rounded cat-img"
+                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat3.png" ?>" class="rounded cat-img"
                                         alt="">
                                     <p class="title-cat"><?= $block->escapeHtml(__('HOGAR')) ?></p>
                                     <span class="text-cat">
@@ -70,7 +90,7 @@
                                     </a>
                                 </div>
                                 <div class="item-cat">
-                                    <img src="/media/porto/home_cat4.png" class="rounded cat-img"
+                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat4.png" ?>" class="rounded cat-img"
                                         alt="">
                                     <p class="title-cat"><?= $block->escapeHtml(__('Jabones')) ?></p>
                                     <span class="text-cat">
@@ -82,7 +102,7 @@
                                     </a>
                                 </div>
                                 <div class="item-cat">
-                                    <img src="/media/porto/home_cat5.png" class="rounded cat-img"
+                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat5.png" ?>" class="rounded cat-img"
                                         alt="">
                                     <p class="title-cat"><?= $block->escapeHtml(__('Cuidado Corporal')) ?></p>
                                     <span class="text-cat">
@@ -94,7 +114,7 @@
                                     </a>
                                 </div>
                                 <div class="item-cat">
-                                    <img src="/media/porto/home_cat6.png&quot;}}" class="rounded cat-img"
+                                    <img src="<?php echo "{$urlMedia}wysiwyg/smartwave/porto/home_cat6.png" ?>" class="rounded cat-img"
                                         alt="">
                                     <p class="title-cat"><?= $block->escapeHtml(__('Regalos')) ?></p>
                                     <span class="text-cat">
@@ -120,19 +140,19 @@
                                                         <ul class="clearfix">
                                                             <li class="first odd">
                                                                 <a href="<?php $block->getUrl('regalos.html')?>" manual_cm_re="Null_search-_-hs1-_-Gift_cards">
-                                                                    <img alt="Gift Cards" src="/media/porto/page_bg/gift-cards.svg">
+                                                                    <img alt="Gift Cards" src="<?php echo "{$urlMedia}porto/page_bg/gift-cards.svg" ?>">
                                                                     <span><?= $block->escapeHtml(__('Gift Cards')) ?></span>
                                                                 </a>
                                                             </li>
                                                             <li class="even">
                                                                 <a href="<?php $block->getUrl('cuidado-corporal.html')?>" manual_cm_re="Null_search-_-hs2-_-Find_a_fragrance">
-                                                                    <img alt="Find a Fragrance" src="/media/porto/page_bg/find-a-fragrance.svg">
+                                                                    <img alt="Find a Fragrance" src="<?php echo "{$urlMedia}porto/page_bg/find-a-fragrance.svg" ?>">
                                                                     <span><?= $block->escapeHtml(__('Find a Fragrance')) ?></span>
                                                                 </a>
                                                             </li>
                                                             <li class="odd even">
                                                                 <a href="<?php $block->getUrl('store-locator/')?>" manual_cm_re="Null_search-_-hs3-_-Find_a_store">
-                                                                    <img alt="Find a Store" src="/media/porto/page_bg/find-a-store.svg">
+                                                                    <img alt="Find a Store" src="<?php echo "{$urlMedia}porto/page_bg/find-a-store.svg" ?>">
                                                                     <span><?= $block->escapeHtml(__('Find a Store')) ?></span>
                                                                 </a>
                                                             </li>
@@ -143,8 +163,6 @@
                     </div>
                 </div>
         </div>
-        
-       
     </div>
 
 </body>
