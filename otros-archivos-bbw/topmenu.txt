@@ -1,0 +1,33 @@
+ // megamenu
+
+                    $(".page-header.type1 .navigation li.level0.parent, .page-header.type1 .navigation li.level0>.level-top,.navigation .level0 .submenu:before,.sw-megamenu.navigation li.level0.fullwidth>.submenu").hover( function(evt){    
+                        let li = $(this).find('.ui-menu-item.ui-menu-item-hijo.level1.parent');
+                       
+                            subCat1.addClass("col-md-6");
+                            li.css('width','50%');
+                            li.first().addClass('active');
+                        
+                        
+                    });
+                    // active list
+                    $('.sw-megamenu ul ul.mega-columns li.level1.parent').hover( function(){
+                        
+                        $('.ui-menu-item.ui-menu-item-hijo.level1.parent.active').removeClass('active');
+                    
+                        //  $(".sw-megamenu ul ul.mega-columns li.level1.parent:first-child").removeClass('active');  
+                    });
+
+                   
+                    
+                    $(".page-header.type1 .navigation li.level0.parent").mouseout( function(evt){
+                        var e = evt.toElement || evt.relatedTarget;
+                        console.log(evt);
+                        if (e.parentNode == this || e.parentNode.parentNode == this || e == this) {
+                            return;
+
+                        }
+                            
+                            $(".sw-megamenu ul ul.mega-columns li.level1.parent:first-child").removeClass('active');
+                            
+                                
+                    });
